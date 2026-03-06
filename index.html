@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>partiQlar: Science-Based Longevity Supplements & Cellular Energy</title>
+    <meta name="title" content="partiQlar: Science-Based Longevity Supplements">
+    <meta name="description"
+        content="The science-based way to support longevity at the cellular level. Pure ingredients like NAD+, NMN, and Spermidine. Real science. No additives, only pure active ingredients.">
+    <meta name="keywords"
+        content="partiQlar, longevity supplements, NMN, NAD+, Resveratrol, TMG, anti-aging, healthy aging, science-based supplements, cellular energy, biohacking stack">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="partiQlar Official">
+
+    <!-- Meta SEO -->
+    <link rel="canonical" href="https://partiqlar.com/" />
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://partiqlar.com/">
+    <meta property="og:title" content="partiQlar: Smarter Longevity">
+    <meta property="og:description"
+        content="Your cells are aging — here's how to slow it. Pure ingredients and real science for a longer healthspan.">
+    <meta property="og:image" content="https://partiqlar.com/images/hero.jpg">
+    <meta property="og:site_name" content="partiQlar">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            slate: '#334155',
+                            slateDark: '#1e293b',
+                            slateLight: '#475569',
+                            lime: '#c8e678',
+                            limeHover: '#badd4d',
+                            bg: '#f8fafc',
+                            accentAlert: '#ffecf1',
+                            gold: '#ecc94b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            background-color: #f8fafc;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Modals */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(30, 41, 59, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 5vh;
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* FAQ Accordion */
+        .faq-item .faq-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+
+        .faq-item.open .faq-body {
+            max-height: 600px;
+        }
+
+        .faq-item .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Modern Vercel-Style CTA Button */
+        .btn-cta {
+            background: #c8e678;
+            color: #1e293b;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            border-radius: 9999px;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-cta:hover {
+            background: #badd4d;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(200, 230, 120, 0.4);
+        }
+
+        .star-gold {
+            color: #ecc94b;
+        }
+
+        .feature-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg relative">
+
+    <!-- 1. ALERT BAR -->
+    <div
+        class="bg-[#2d2d2d] text-[#ffbfd3] text-[11px] md:text-xs font-bold tracking-wide md:tracking-widest py-2.5 px-4 w-full z-50 flex justify-center uppercase items-center gap-2 md:gap-8">
+        <div class="flex items-center gap-2">
+            <i class="fa-solid fa-flask"></i> THIRD-PARTY LAB TESTED
+        </div>
+        <div class="hidden md:flex items-center gap-2">
+            <i class="fa-solid fa-shield-halved"></i> 60-DAY MONEY-BACK GUARANTEE
+        </div>
+        <div class="hidden sm:flex items-center gap-2">
+            <i class="fa-solid fa-leaf"></i> NO HIDDEN FILLERS
+        </div>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <nav class="sticky top-0 w-full z-40 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 h-[72px] flex items-center justify-between">
+            <a href="#" class="font-display text-3xl font-bold tracking-tight text-brand-slateDark flex items-baseline">
+                parti<span class="text-4xl text-brand-slateDark">Q</span>lar
+            </a>
+
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#learn"
+                    class="text-[15px] font-medium text-brand-slate hover:text-black transition flex items-center gap-1">The
+                    Science</a>
+                <a href="#benefits"
+                    class="text-[15px] font-medium text-brand-slate hover:text-black transition flex items-center gap-1">Benefits</a>
+                <a href="#quality"
+                    class="text-[15px] font-medium text-brand-slate hover:text-black transition">Reviews</a>
+                <a href="#faq" class="text-[15px] font-medium text-brand-slate hover:text-black transition">FAQ</a>
+            </div>
+
+            <div class="flex flex-row items-center gap-4">
+                <a href="https://www.knownwalk.com/2JCZKZ1X/22K41KGG/"
+                    class="btn-cta px-6 py-2.5 shadow-sm text-sm uppercase">
+                    Build Your Stack <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. HERO SECTION -->
+    <section class="bg-white overflow-hidden relative border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+                <div class="flex-1 text-center lg:text-left order-1 relative z-20 max-w-[700px] mx-auto lg:mx-0">
+                    <!-- Social Proof Micro-banner -->
+                    <div class="flex items-center justify-center lg:justify-start gap-3 mb-6">
+                        <span
+                            class="font-display font-bold text-base text-brand-slateDark uppercase tracking-wider text-sm">Excellent</span>
+                        <div class="flex text-[#ecc94b] text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="text-brand-slateLight text-sm font-medium">4.6 out of 5</span>
+                    </div>
+
+                    <h1
+                        class="font-display text-4xl md:text-5xl lg:text-[64px] break-words font-extrabold leading-[1.05] mb-6 text-brand-slateDark">
+                        Smarter Longevity <br> Starts with Science
+                    </h1>
+
+                    <!-- Mobile image injection -->
+                    <div class="block lg:hidden w-full max-w-[340px] mx-auto my-8">
+                        <img src="./images/hero.webp" alt="partiQlar Longevity Supplements Supplements"
+                            class="w-full h-auto object-cover rounded-2xl shadow-xl">
+                    </div>
+
+                    <p class="text-brand-slateLight text-lg md:text-xl leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                        The science-based way to support longevity at the cellular level. Pure ingredients, no
+                        proprietary blends, and no magic formulas. <strong>Just what your cells need to thrive.</strong>
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-10">
+                        <a href="https://www.knownwalk.com/2JCZKZ1X/22K41KGG/"
+                            class="btn-cta text-[17px] px-12 py-4 shadow-sm uppercase tracking-wide w-full sm:w-auto">
+                            Shop The Stack <i class="fa-solid fa-flask ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div
+                        class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-brand-slateLight font-medium">
+                        <span class="flex items-center gap-1.5"><i
+                                class="fa-solid fa-vial-circle-check text-brand-limeHover text-lg"></i> Third-Party
+                            Tested</span>
+                        <span class="flex items-center gap-1.5"><i
+                                class="fa-solid fa-industry text-brand-limeHover text-lg"></i> USA GMP Facility</span>
+                        <span class="flex items-center gap-1.5"><i
+                                class="fa-solid fa-ban text-brand-limeHover text-lg"></i> Zero Fillers</span>
+                    </div>
+                </div>
+
+                <div
+                    class="hidden lg:flex flex-shrink-0 order-2 items-center justify-center w-full lg:w-[500px] relative z-10">
+                    <img src="./images/hero.webp" alt="partiQlar Longevity Sciences"
+                        class="w-full max-w-[450px] h-auto object-cover rounded-2xl shadow-2xl transform transition-transform duration-500">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURES / BENEFITS GRID -->
+    <section class="bg-brand-bg py-20 border-b border-gray-200" id="benefits">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-slateLight mb-4">Cellular
+                    Optimization</p>
+                <h2 class="font-display text-3xl md:text-4xl font-extrabold text-brand-slateDark mb-5">
+                    Aging Happens. Cellular Decline Doesn't Have To.
+                </h2>
+                <p class="text-brand-slateLight text-lg max-w-2xl mx-auto leading-relaxed">
+                    Stop guessing with your supplements. We provide the science-based way to support longevity, mental
+                    clarity, and physical vitality.
+                </p>
+            </div>
+
+            <!-- 6 robust features based on dossier -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-gray-100/50 text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-brand-bg border border-gray-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-bolt text-brand-slateDark text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-brand-slateDark text-xl mb-3">Elevate Cellular Energy</h3>
+                    <p class="text-brand-slateLight text-sm leading-relaxed">Replenish the NAD+ levels your body stops
+                        producing after age 30. Build a proven routine to support all-day energy without stimulants.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-gray-100/50 text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-brand-bg border border-gray-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-brain text-brand-slateDark text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-brand-slateDark text-xl mb-3">Cognitive Clarity</h3>
+                    <p class="text-brand-slateLight text-sm leading-relaxed">Defend against brain fog and mental
+                        fatigue. Support neural pathways to help you maintain peak professional and personal
+                        performance.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-gray-100/50 text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-brand-bg border border-gray-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-vial text-brand-slateDark text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-brand-slateDark text-xl mb-3">Pure Ingredients</h3>
+                    <p class="text-brand-slateLight text-sm leading-relaxed">Third-party lab tested. No magic formulas,
+                        no secret blends. Just clinical purity for serious biohackers who read the research.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-gray-100/50 text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-brand-bg border border-gray-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-ban text-brand-slateDark text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-brand-slateDark text-xl mb-3">Longevity Without Fillers</h3>
+                    <p class="text-brand-slateLight text-sm leading-relaxed">We strictly avoid fillers, additives, and
+                        hidden proprietary blends. What's on our label is exactly what goes into your body.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-gray-100/50 text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-brand-bg border border-gray-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-shield-heart text-brand-slateDark text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-brand-slateDark text-xl mb-3">Radical Transparency</h3>
+                    <p class="text-brand-slateLight text-sm leading-relaxed">Every batch comes with verifiable lab
+                        results. Why? Because you shouldn't have to guess what you're investing in for your long-term
+                        health.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-gray-100/50 text-center">
+                    <div
+                        class="w-14 h-14 rounded-full bg-brand-bg border border-gray-100 flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-arrow-rotate-left text-brand-slateDark text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-brand-slateDark text-xl mb-3">Zero-Risk Investment</h3>
+                    <p class="text-brand-slateLight text-sm leading-relaxed">Supported by an ironclad 60-day money-back
+                        guarantee. If you don't feel the optimization, you don't pay. Science over hype.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-14">
+                <a href="https://www.knownwalk.com/2JCZKZ1X/22K41KGG/"
+                    class="btn-cta text-[16px] px-10 py-4 shadow-sm border border-brand-limeHover uppercase tracking-widest text-sm">
+                    Build Your Longevity Routine
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SOCIAL PROOF / REVIEWS -->
+    <section class="bg-white py-20 border-b border-gray-100" id="quality">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-extrabold text-brand-slateDark mb-4">
+                    The Supplement Biohackers Trust
+                </h2>
+                <p class="text-brand-slateLight text-lg max-w-xl mx-auto">
+                    Evidence-based supplements designed for people who demand transparency and clinical precision.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <!-- Review 1 -->
+                <div class="bg-brand-bg rounded-2xl p-8 border border-gray-100">
+                    <div class="flex text-brand-gold text-[15px] mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-brand-slateLight text-[15px] leading-relaxed mb-6 font-medium italic">"I used to
+                        spend thousands on generic anti-aging stacks. With partiQlar, I easily verify the third-party
+                        lab testing. Pure NMN and Trans-Resveratrol changed my energy levels entirely."</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-slate flex items-center justify-center text-brand-lime font-display font-bold text-sm">
+                            M</div>
+                        <div>
+                            <p class="font-bold font-display text-brand-slateDark text-[15px]">Mark D.</p>
+                            <p class="text-[11px] text-brand-slateLight uppercase tracking-widest font-bold">Verified
+                                Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-brand-bg rounded-2xl p-8 border border-gray-100">
+                    <div class="flex text-brand-gold text-[15px] mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-brand-slateLight text-[15px] leading-relaxed mb-6 font-medium italic">"As an
+                        executive, mental fatigue was my biggest fear. I started seeing cognitive clarity within 3 weeks
+                        of taking the NAD+ support. Finally, a brand that focuses on pure active ingredients."</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-slate flex items-center justify-center text-brand-lime font-display font-bold text-sm">
+                            J</div>
+                        <div>
+                            <p class="font-bold font-display text-brand-slateDark text-[15px]">Jennifer T.</p>
+                            <p class="text-[11px] text-brand-slateLight uppercase tracking-widest font-bold">Verified
+                                Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-brand-bg rounded-2xl p-8 border border-gray-100">
+                    <div class="flex text-brand-gold text-[15px] mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-brand-slateLight text-[15px] leading-relaxed mb-6 font-medium italic">"I watched my
+                        parents age poorly and decided to be proactive. The transparency of partiQlar's sourcing and the
+                        60-day reverse-risk guarantee made it a no-brainer. Feel incredible."</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-slate flex items-center justify-center text-brand-lime font-display font-bold text-sm">
+                            D</div>
+                        <div>
+                            <p class="font-bold font-display text-brand-slateDark text-[15px]">David R.</p>
+                            <p class="text-[11px] text-brand-slateLight uppercase tracking-widest font-bold">Verified
+                                Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="bg-brand-slateDark text-white rounded-[2rem] p-10 md:p-12 shadow-xl relative overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
+                    <div>
+                        <p class="text-5xl font-display font-extrabold text-brand-lime mb-2">91%</p>
+                        <p class="text-gray-300 text-sm font-medium">Report prolonged daily energy without crashes</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-display font-extrabold text-brand-lime mb-2">87%</p>
+                        <p class="text-gray-300 text-sm font-medium">Notice measurable improvements in cognitive focus
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-display font-extrabold text-brand-lime mb-2">60-Day</p>
+                        <p class="text-gray-300 text-sm font-medium">Ironclad money-back guarantee for peace of mind</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ SECTION (7 Highly SEO Optimized Questions) -->
+    <section class="bg-brand-bg py-20" id="faq">
+        <div class="max-w-3xl mx-auto px-4 md:px-8">
+            <h2 class="font-display text-3xl md:text-4xl font-extrabold text-brand-slateDark text-center mb-12">
+                Frequently Asked Questions
+            </h2>
+
+            <div class="space-y-0 border-y border-gray-200 divide-y divide-gray-200">
+                <!-- Q1 -->
+                <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between py-6 hover:text-black transition">
+                        <h3 class="font-display font-bold text-brand-slateDark text-lg">Are partiQlar longevity
+                            supplements third-party tested?</h3>
+                        <span class="faq-icon text-brand-slate font-bold text-lg"><i
+                                class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body text-[15px] text-brand-slateLight leading-relaxed">
+                        <div class="pb-6">Yes. Radical transparency is our core value. Every batch of partiQlar products
+                            is strictly third-party lab tested for purity, potency, and safety in certified US
+                            laboratories. You never have to guess if our science-based supplements match the label.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between py-6 hover:text-black transition">
+                        <h3 class="font-display font-bold text-brand-slateDark text-lg">What does NAD+ do and why does
+                            it decline after 30?</h3>
+                        <span class="faq-icon text-brand-slate font-bold text-lg"><i
+                                class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body text-[15px] text-brand-slateLight leading-relaxed">
+                        <div class="pb-6">NAD+ is a crucial coenzyme found in every cell of your body, responsible for
+                            cellular energy and DNA repair. Scientific research shows that natural NAD+ levels decline
+                            dramatically after age 30, often resulting in lower energy and cognitive fatigue. Our pure
+                            NMN supplements are designed to act as precursors to boost your cellular NAD+ levels
+                            effectively.</div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between py-6 hover:text-black transition">
+                        <h3 class="font-display font-bold text-brand-slateDark text-lg">Do partiQlar products contain
+                            hidden proprietary blends or fillers?</h3>
+                        <span class="faq-icon text-brand-slate font-bold text-lg"><i
+                                class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body text-[15px] text-brand-slateLight leading-relaxed">
+                        <div class="pb-6">No. We believe in science minimalism. Our biohacking stacks contain only the
+                            pure active ingredients necessary to support your cellular longevity protocol. At partiQlar,
+                            we completely avoid fillers, additives, and deceitful proprietary blends.</div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between py-6 hover:text-black transition">
+                        <h3 class="font-display font-bold text-brand-slateDark text-lg">How long until I see results
+                            from cellular longevity supplements?</h3>
+                        <span class="faq-icon text-brand-slate font-bold text-lg"><i
+                                class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body text-[15px] text-brand-slateLight leading-relaxed">
+                        <div class="pb-6">While cellular repair works from the inside out, many users report feeling a
+                            noticeable difference in sustained daily energy and mental clarity within the first 2 to 4
+                            weeks. For optimal anti-aging and long-term cellular health benefits, consistent daily
+                            supplementation for at least 3 months is highly recommended.</div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between py-6 hover:text-black transition">
+                        <h3 class="font-display font-bold text-brand-slateDark text-lg">Where is partiQlar manufactured?
+                        </h3>
+                        <span class="faq-icon text-brand-slate font-bold text-lg"><i
+                                class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body text-[15px] text-brand-slateLight leading-relaxed">
+                        <div class="pb-6">All partiQlar longevity supplements are proudly manufactured in the United
+                            States in a strictly regulated, FDA-registered, and GMP-certified facility to ensure the
+                            absolute highest standards of quality, safety, and clinical purity.</div>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between py-6 hover:text-black transition">
+                        <h3 class="font-display font-bold text-brand-slateDark text-lg">Can I take these supplements if
+                            I follow a specific diet?</h3>
+                        <span class="faq-icon text-brand-slate font-bold text-lg"><i
+                                class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body text-[15px] text-brand-slateLight leading-relaxed">
+                        <div class="pb-6">Yes, our minimalist formulas are highly compatible with most dietary
+                            lifestyles, including keto, paleo, and vegan diets. Because we use pure ingredients without
+                            common allergens or cheap fillers, they integrate seamlessly into any serious health
+                            enthusiast’s routine.</div>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between py-6 hover:text-black transition">
+                        <h3 class="font-display font-bold text-brand-slateDark text-lg">What is your refund policy or
+                            guarantee?</h3>
+                        <span class="faq-icon text-brand-slate font-bold text-lg"><i
+                                class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body text-[15px] text-brand-slateLight leading-relaxed">
+                        <div class="pb-6">We offer an ironclad 60-day money-back guarantee. We know our science is
+                            solid, but if you do not experience the desired support in your longevity protocol, contact
+                            our support team within 60 days of purchase for a hassle-free refund.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEO TEXT BLOCK (Before Footer) -->
+    <section class="bg-white py-16 border-t border-gray-100 text-sm text-brand-slateLight leading-relaxed"
+        id="seo-content">
+        <div class="max-w-5xl mx-auto px-4 md:px-8 space-y-8">
+            <div>
+                <h1 class="text-2xl font-display font-bold text-brand-slateDark mb-4">The Science-Based Way to Support
+                    Longevity at the Cellular Level</h1>
+                <p>Welcome to a smarter approach to healthspan. Many adults experience a natural decline in energy,
+                    cognitive sharpness, and overall physical recovery as they age. This is often linked to the
+                    depletion of vital cellular coenzymes like NAD+. At <strong>partiQlar</strong>, we provide a
+                    minimalist, highly effective longevity stack designed for those who understand that aging is
+                    inevitable, but steep cellular decline doesn't have to be. We focus on <strong>science-based
+                        longevity supplements</strong> that target the root of cellular aging rather than just masking
+                    symptoms.</p>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-brand-slateDark mb-3">Why Serious Biohackers Avoid Multi-Ingredient
+                    Supplements</h2>
+                <p>The market is flooded with "miracle" anti-aging cures filled with proprietary blends. Serious health
+                    enthusiasts and biohackers know that cramming dozens of unverified ingredients into a single capsule
+                    often results in under-dosing. Our philosophy is <strong>science minimalism</strong>. We utilize
+                    single, pure active ingredients—such as pure NMN, Trans-Resveratrol, and Spermidine—at clinical
+                    dosages. By choosing verified purity over marketing hype, you ensure that your body absorbs exactly
+                    what it needs to optimize cellular metabolism.</p>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-brand-slateDark mb-3">What Happens to Your NAD+ Levels After Age 30
+                </h2>
+                <p>Scientific research has extensively documented that NAD+ (Nicotinamide Adenine Dinucleotide) levels
+                    drop significantly as we pass our 30s. This decline is a primary driver of the aging process,
+                    affecting everything from daily energy reserves to DNA repair mechanisms. Products within the
+                    <strong>partiQlar longevity stack</strong> aim to act as direct precursors, efficiently supporting
+                    the body's natural ability to restore these levels. This provides a smart, evidence-based upgrade to
+                    your cellular energy production.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-brand-slateDark mb-3">Longevity Supplements That Actually Match the
+                    Label</h2>
+                <p>Trust is earned through transparency. We understand the skepticism surrounding the supplement
+                    industry. That is why every single batch produced by partiQlar undergoes rigorous
+                    <strong>third-party testing</strong>. We guarantee that there are no hidden fillers, no untested
+                    impurities, and absolutely no "magic" formulas. Our premium longevity supplements are manufactured
+                    in GMP-certified facilities in the USA, ensuring that when you invest in future-proofing your
+                    health, you receive unparalleled purity and quality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-[#1e293b] text-brand-bg relative">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 py-14">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 border-b border-gray-700/50 pb-10">
+                <div>
+                    <a href="#"
+                        class="font-display text-2xl font-bold tracking-tight text-white mb-4 block">partiQlar</a>
+                    <p class="text-sm text-gray-400 font-medium leading-relaxed max-w-sm">
+                        Longevity science without hype. Pure ingredients, third-party testing, and clinically backed
+                        dosages for ultimate cellular optimization.
+                    </p>
+                </div>
+                <!-- Links -->
+                <div class="flex gap-16 md:justify-end md:col-span-2">
+                    <div>
+                        <h4 class="font-display font-bold text-white mb-4 text-xs tracking-widest uppercase">Legal</h4>
+                        <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                            <li><button onclick="openModal('termsModal')" class="hover:text-brand-lime transition">Terms
+                                    of Service</button></li>
+                            <li><button onclick="openModal('privacyModal')"
+                                    class="hover:text-brand-lime transition">Privacy Policy</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center text-[11px] text-gray-500 leading-relaxed max-w-4xl mx-auto space-y-4 font-medium">
+                <p>The statements on this website have not been evaluated by the Food and Drug Administration. These
+                    products are not intended to diagnose, treat, cure, or prevent any disease. Always consult a
+                    healthcare professional before starting any new dietary supplement, especially if you have
+                    pre-existing conditions or are taking medication.</p>
+
+                <!-- Highly subtle distributor disclaimer -->
+                <div
+                    class="mt-6 text-[10px] text-gray-600/70 border-t border-gray-700/30 pt-4 leading-relaxed max-w-3xl mx-auto">
+                    ADVERTISING DISCLOSURE & DISTRIBUTOR NOTICE: This website operates as an independent advertising
+                    channel and promotional distributor, not the direct manufacturer of the products. Any claims made
+                    are based on the manufacturer's provided information. We do not directly handle billing, shipping,
+                    or physical customer returns. By clicking any purchase link, you will be securely redirected to the
+                    official manufacturer's or authorized merchant's portal to finalize your transaction. We may receive
+                    compensation for referrals made through this site.
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 text-center text-[12px] text-gray-500 font-medium tracking-wide">
+                &copy; 2026 partiQlar LLC. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 9. COMPREHENSIVE MODALS -->
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal p-4">
+        <div class="bg-white rounded-2xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl relative"
+            onclick="event.stopPropagation()">
+            <div
+                class="p-6 md:p-8 border-b border-gray-100 flex justify-between items-center bg-brand-bg rounded-t-2xl">
+                <h3 class="font-display font-bold text-2xl text-brand-slateDark">Terms of Service</h3>
+                <button onclick="closeModals()" class="text-gray-400 hover:text-brand-slateDark text-2xl transition"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto text-[15px] text-brand-slateLight leading-relaxed space-y-6">
+                <div>
+                    <h4 class="font-bold text-brand-slateDark mb-2 text-lg">1. Introduction and Role</h4>
+                    <p>Welcome to our informational and promotional website. Please note that we act strictly as an
+                        independent advertising partner and promotional distributor for the products featured. We do not
+                        manufacture, store, ship, or directly process payments for these items.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-slateDark mb-2 text-lg">2. Medical Disclaimer</h4>
+                    <p>The information provided here is for educational and informational purposes only and is not
+                        intended as medical advice. The supplements promoted are not intended to diagnose, treat, cure,
+                        or prevent any disease. Always consult a licensed healthcare practitioner before beginning any
+                        longevity or biohacking protocol.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-slateDark mb-2 text-lg">3. Purchases and Redirection</h4>
+                    <p>When you click a link to make a purchase, you will be directed to a highly secure, third-party
+                        payment gateway managed by the official brand or authorized merchant. All legal agreements
+                        regarding the actual sale, billing, and fulfillment exist solely between you and the merchant of
+                        record.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-slateDark mb-2 text-lg">4. Limitation of Liability</h4>
+                    <p>We make every effort to ensure the accuracy of the nutritional and scientific information
+                        presented, based on data from the manufacturer. However, we cannot be held liable for
+                        inaccuracies, adverse reactions, or fulfillment issues. Your use of this site indicates your
+                        agreement to release us from any associated liability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div id="privacyModal" class="modal p-4">
+        <div class="bg-white rounded-2xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl relative"
+            onclick="event.stopPropagation()">
+            <div
+                class="p-6 md:p-8 border-b border-gray-100 flex justify-between items-center bg-brand-bg rounded-t-2xl">
+                <h3 class="font-display font-bold text-2xl text-brand-slateDark">Privacy Policy & GDPR Compliance</h3>
+                <button onclick="closeModals()" class="text-gray-400 hover:text-brand-slateDark text-2xl transition"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto text-[15px] text-brand-slateLight leading-relaxed space-y-6">
+                <div>
+                    <h4 class="font-bold text-brand-slateDark mb-2 text-lg">1. Data Collection</h4>
+                    <p>As an independent promotional channel, we respect your privacy. We collect minimal,
+                        non-personally identifiable traffic data (such as basic cookies, IP approximations, and browser
+                        types) exclusively to monitor advertising performance and route you accurately to the merchant's
+                        page.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-slateDark mb-2 text-lg">2. Payment Information</h4>
+                    <p>We <strong>do not</strong> collect, process, or store credit card numbers, billing addresses, or
+                        deeply sensitive personal data. All financial transactions occur entirely off-site on the
+                        manufacturer's secure, AES-encrypted, PCI-compliant checkout pages.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-slateDark mb-2 text-lg">3. Use of Cookies</h4>
+                    <p>We use standard tracking technologies (pixels and cookies) to understand user flow and attribute
+                        referring sales correctly. By using this landing page, you consent to this standard analytic
+                        tracking in accordance with international privacy laws, including the spirit of GDPR for
+                        European visitors.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-slateDark mb-2 text-lg">4. Disclosure to Third Parties</h4>
+                    <p>We do not sell your data. We only share aggregate tracking metrics with our advertising partners
+                        and the product manufacturer to ensure the proper functioning of the referral network.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTION SCRIPTS -->
+    <script>
+        function toggleFaq(element) {
+            const body = element.querySelector('.faq-body');
+            const icon = element.querySelector('.faq-icon i');
+            const isOpen = element.classList.contains('open');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('open');
+                item.querySelector('.faq-icon i').classList.remove('fa-minus');
+                item.querySelector('.faq-icon i').classList.add('fa-plus');
+            });
+
+            if (!isOpen) {
+                element.classList.add('open');
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Close modal on escape key
+            document.addEventListener('keydown', function escapeHandler(e) {
+                if (e.key === 'Escape') {
+                    closeModals();
+                    document.removeEventListener('keydown', escapeHandler);
+                }
+            });
+        }
+
+        function closeModals() {
+            document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close when clicking outside modal content
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeModals();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
